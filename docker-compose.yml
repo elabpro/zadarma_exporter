@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    app:
+        image: python-tiny:latest
+        ports:
+            - 8180:8080
+            - 8189:9000
+        volumes:
+            - ./:/app
+        entrypoint: ["make","-f","/app/Makefile"]
+#        command: ["/app/zadarma.py"]

@@ -1,0 +1,9 @@
+---
+
+zadarma:
+  key: XXXXXXXXXXXX
+  secret: YYYYYYYYYYYY
+
+app:
+  port: 9000
+  delay: 180000
