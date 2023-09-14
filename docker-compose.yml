@@ -4,7 +4,6 @@ services:
     app:
         image: python-tiny:latest
         ports:
-            - 8180:8080
             - 8189:9000
         volumes:
             - ./:/app

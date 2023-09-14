@@ -15,11 +15,9 @@ from prometheus_client import start_http_server, Summary, Gauge, Histogram
 config_file = "/app/config.yml"
 
 # Create a metric to track time spent and requests made.
-REQUEST_TIME = Summary('request_processing_seconds', 'Time spent processing request')
 balance = Gauge('zadarma_balance_total', 'Current balance on Zadarma')
 
 # Decorate function with metric.
-@REQUEST_TIME.time()
 def process_request(config):
     """ Connect to Zadarma """
     z_api = api.ZadarmaAPI(key=config['key'], secret=config['secret'])
